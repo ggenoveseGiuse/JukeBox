@@ -10,7 +10,8 @@
         android:id="@+id/btnInvia"
         android:layout_width="404dp"
         android:layout_height="44dp"
-        android:text="Button"
+        android:text="Invia"
+        android:onClick="cambiaActivity"
         tools:layout_editor_absoluteX="3dp"
         tools:layout_editor_absoluteY="671dp" />
 
@@ -23,5 +24,22 @@
         android:text="Name"
         tools:layout_editor_absoluteX="100dp"
         tools:layout_editor_absoluteY="343dp" />
+
+    <Button
+        android:id="@+id/btnAvvia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Avvia"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="29dp" />
+
+    <Button
+        android:id="@+id/btnRandom"
+        android:layout_width="400dp"
+        android:layout_height="39dp"
+        android:text="random Num"
+        android:onClick="generaNumero"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="622dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
