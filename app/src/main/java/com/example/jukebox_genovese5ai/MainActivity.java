@@ -1,9 +1,13 @@
 package com.example.jukebox_genovese5ai;
 
+import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.nfc.Tag;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,13 +23,19 @@ public class MainActivity extends AppCompatActivity {
     Button cambiaActivity;
     int n; //numero random
 
+    final String TAG = "MainActivity";
+
+// metodi OnCreate(), OnStart() ecc... sono metodi
+// della classe AppCompatActivity
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        Log.d(TAG, "Dentro OnCreate()");
 
 
         EditText txtNome = findViewById(R.id.txtNome);
@@ -55,8 +65,8 @@ public class MainActivity extends AppCompatActivity {
     public void generaNumero(View view){
 
         Random rand = new Random();
-        int n = rand.nextInt(10);SADDS
-    >text1.setText(Integer.toString(n+1));
+        int n = rand.nextInt(10);
+        text1.setText(Integer.toString(n+1));
         cambiaActivity.setVisibility(View.VISIBLE);
     }
 

@@ -16,7 +16,9 @@ public class MainActivity2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState); // invochiamo il metodo della classe padre
+        // stiamo sovrascrivendo il metodo
+        Log.d(TAG, "Dentro OnCreate()");
         setContentView(R.layout.activity_main2);
 
         Intent intent = getIntent();
@@ -41,4 +43,12 @@ public class MainActivity2 extends AppCompatActivity {
         //immagine.setImageDrawable(R.id.cover);
         //ImageView image = new ImageView();
     }
+
+    @Override
+    protected void onStart(){
+        super.onStart();
+    }
+
+
+
 }
