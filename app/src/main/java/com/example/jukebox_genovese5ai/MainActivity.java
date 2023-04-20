@@ -55,8 +55,8 @@ public class MainActivity extends AppCompatActivity {
     public void generaNumero(View view){
 
         Random rand = new Random();
-        int n = rand.nextInt(10);
-        text1.setText(Integer.toString(n+1));
+        int n = rand.nextInt(10);SADDS
+    >text1.setText(Integer.toString(n+1));
         cambiaActivity.setVisibility(View.VISIBLE);
     }
 
