@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             // istanziare un'interfaccia (OnClickListener)
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
+                Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
                 intent.putExtra("Numero", 10);
                 startActivity(intent);
             }
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void cambiaActivity(View view){
-        Intent ActivityMusic = new Intent(getApplicationContext(), MainActivity2.class);
+        Intent ActivityMusic = new Intent(getApplicationContext(), SecondActivity.class);
         ActivityMusic.putExtra("NumeroRandom", n);
         startActivity(ActivityMusic);
 

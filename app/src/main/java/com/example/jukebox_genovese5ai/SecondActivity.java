@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 
 
-public class MainActivity2 extends AppCompatActivity {
+public class SecondActivity extends AppCompatActivity {
 
     final String TAG = "SecondActivity";
 
@@ -19,7 +19,7 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState); // invochiamo il metodo della classe padre
         // stiamo sovrascrivendo il metodo
         Log.d(TAG, "Dentro OnCreate()");
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_second);
 
         Intent intent = getIntent();
 
@@ -35,7 +35,7 @@ public class MainActivity2 extends AppCompatActivity {
         TextView txttitolo = findViewById(R.id.txtTitolo);
         txttitolo.setText(titolo);
 
-        ImageView image = new ImageView(MainActivity2.this);
+        ImageView image = new ImageView(SecondActivity.this);
 
 
         ImageView immagine = findViewById(R.id.idImmagine);
