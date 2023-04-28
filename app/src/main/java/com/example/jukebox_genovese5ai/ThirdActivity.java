@@ -38,7 +38,7 @@ public class ThirdActivity extends AppCompatActivity {
         String t = ((Intent) intent).getStringExtra("titolo");
         Log.d(TAG, "Titolo " + t);
         testo.setText(leggiFile(t,getApplicationContext()));
-        Animation anim = AnimationUtils.loadAnimation(this, R.anim.slid e_in_top);
+        Animation anim = AnimationUtils.loadAnimation(this, R.anim.slide_in_top);
         testo.startAnimation(anim);
 
         like.setOnClickListener(new View.OnClickListener() {
