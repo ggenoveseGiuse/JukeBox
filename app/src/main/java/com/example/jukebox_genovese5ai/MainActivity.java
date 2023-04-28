@@ -62,6 +62,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    protected void onStart(){
+        super.onStart();
+        Log.d(TAG, "Dentro onStart()");
+
+    }
+
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Toast.makeText(getApplicationContext(), "Bentornato!", Toast.LENGTH_LONG).show();
+        Log.d(TAG,"Dentro onRestart()");
+    }
+
+
     public void generaNumero(View view){
 
         Random rand = new Random();
@@ -74,9 +90,8 @@ public class MainActivity extends AppCompatActivity {
     public void cambiaActivity(View view){
         Intent ActivityMusic = new Intent(getApplicationContext(), SecondActivity.class);
         ActivityMusic.putExtra("NumeroRandom", n);
-        startActivity(ActivityMusic);
+        startActivity(SecondActivity);
 
     }
 
-
-    }
+}

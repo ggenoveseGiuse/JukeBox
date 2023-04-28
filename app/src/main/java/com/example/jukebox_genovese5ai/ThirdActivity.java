@@ -52,23 +52,22 @@ public class ThirdActivity extends AppCompatActivity {
 
 
     public String leggiFile(String nomeFile, Context c){
-
         String esito = "";
-
         AssetManager am = c.getAssets();    //gestore
         // c è il contesto
         String line;
+
         try {
             //1) APERTURA FILE
             InputStream is = am.open(nomeFile);
             //2) LETTURA DEL FILE
-            BufferedReader br = new BufferedReader(
-                    new InputStreamReader(is));
+            BufferedReader br = new BufferedReader(new InputStreamReader(is));
             while ((line = br.readLine()) != null) {
                 esito += line;
                 esito += "\n";
             }
-        } catch(FileNotFoundException ex){
+        } 
+        catch(FileNotFoundException ex){
             Log.e("TAG", "file non esistente");
             esito = "errore apertura";
         }
@@ -80,4 +79,5 @@ public class ThirdActivity extends AppCompatActivity {
         return esito;
     }
 
-}
+
+}       

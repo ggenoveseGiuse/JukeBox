@@ -13,42 +13,46 @@ import android.widget.TextView;
 public class SecondActivity extends AppCompatActivity {
 
     final String TAG = "SecondActivity";
+    TextView titolo;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) { 
         super.onCreate(savedInstanceState); // invochiamo il metodo della classe padre
         // stiamo sovrascrivendo il metodo
         Log.d(TAG, "Dentro OnCreate()");
         setContentView(R.layout.activity_second);
 
+        // geetIntent() per recuperare i dati inviati 
         Intent intent = getIntent();
-
         Bundle bundle = intent.getExtras();
         int numero = bundle.getInt("Numero");
-
         Log.d(TAG, "Numero passato: " + numero);
 
+
         String titolo = "";
-        if(numero == 10){
-            titolo = "Cenere";
-        }
         TextView txttitolo = findViewById(R.id.txtTitolo);
-        txttitolo.setText(titolo);
+        ImageView cover = findViewById(R.id.idImmagine);
 
-        ImageView image = new ImageView(SecondActivity.this);
+        if(numero == 10){
+            titolo = "Cenere - Lazza";
+            txttitolo.setText(titolo);
+            cover.setImageResource(R.drawable.cenere_cover);
+        }
+        else{
+            titolo.setText("Dybala - ROS21");
+            cover.setImageResource(R.drawable.dybala_cover);
+        }
+        
 
 
-        ImageView immagine = findViewById(R.id.idImmagine);
-        immagine.setImageResource(R.drawable.cover);
-        //immagine.setImageDrawable(R.id.cover);
-        //ImageView image = new ImageView();
+        
     }
 
-    @Override
-    protected void onStart(){
-        super.onStart();
+    public void visualizza(View view) {
+        Intent intent = new Intent(this, ThirdActivity.class);
+        intent.putExtra("titolo", titolo.getText());
+        startActivity(intent);
+
+
     }
-
-
-
 }
